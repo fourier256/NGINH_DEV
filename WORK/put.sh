@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # SFTP 서버 접속 정보
-HOST="3.38.181.233"
+HOST="43.201.147.78"
 USER="ubuntu"
 PASS="your_password"
 REMOTE_DIR="WORK/"
