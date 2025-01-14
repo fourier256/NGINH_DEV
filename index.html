@@ -1,30 +1,19 @@
-<!DOCTYPE html>
-<!-- saved from url=(0030)http://fourier3.dothome.co.kr/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <!--meta name="viewport" content="width=device-width"-->
-  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" charset="utf-8" />
-  <title>window</title>
-</head>
-<body>
-<script src='src2/TEMP_GME.js'></script>
-<script src='src2/Element.js'></script>
-<script src='src2/Button.js'></script>
-<script src='src2/TextButton.js'></script>
-<script src='src2/Text.js'></script>
-<script src='src2/TextEdit.js'></script>
-<script src='src2/Select.js'></script>
-<script src='src2/Rect.js'></script>
-<script src='src2/Stage.js'></script>
-<script src='src2/Unit.js'></script>
-<script src='src2/UnitPool.js'></script>
-<script src='src2/Sprite.js'></script>
-<script src='src2/SpritePool.js'></script>
-<script src='src2/Animation.js'></script>
-<script src='src2/AnimationSet.js'></script>
-<script src='src2/TileMap.js'></script>
-<script src='src2/Paint.js'></script>
-<script src='src2/Core.js'></script>
-<script src='src2/main.js'></script>
-</body>
-</html>
+"""
+pkg update -y && pkg upgrade -y
+termux-setup-storage
+pkg install proot-distro 
+proot-distro install ubuntu
+proot-distro login ubuntu
+add-apt-repository ppa:mozillateam/ppa
+apt update -y
+apt upgrade -y
+apt install -y dialog apt-utils
+apt install -y psmisc htop software-properties-common wget mesa-utils dbus-x11 xfce4 xfce4-terminal xfce4-goodies sudo vim git tzdata firefox-esr vim-gtk3
+apt install -y fcitx fcitx-hangul fonts-noto-cjk locales language-pack-ko
+groupadd storage
+vim /etc/sudoers
+startx.sh
+export DISPLAY=:0
+# XFCE4-SESSION
+dbus-launch --exit-with-session startxfce4 &
+"""
